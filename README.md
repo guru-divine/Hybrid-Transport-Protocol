@@ -2,17 +2,11 @@
   <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" width="100" />
 </p>
 <p align="center">
-    <h1 align="center">MTP</h1>
+    <h1 align="center">Hybrid Transport Protocol</h1>
 </p>
 <p align="center">
     <em>Emulating End-to-End Reliable Flow Control over Unreliable Communication Channels</em>
 </p>
-<p align="center">
-	<img src="https://img.shields.io/github/license/ParamBhaskar/MTP?style=flat&color=0080ff" alt="license">
-	<img src="https://img.shields.io/github/last-commit/ParamBhaskar/MTP?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/ParamBhaskar/MTP?style=flat&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/ParamBhaskar/MTP?style=flat&color=0080ff" alt="repo-language-count">
-<p>
 <p align="center">
 		<em>Developed with the software and tools below.</em>
 </p>
@@ -38,7 +32,7 @@
 ##  Overview
 
 
-MTP is a custom transport protocol developed to provide reliable, in-order delivery of messages over the inherently unreliable UDP protocol. MTP employs window-based flow control to ensure data integrity and delivery. It is designed to handle packet loss, delays, and reordering that are common in unreliable communication channels.
+HTP is a custom transport protocol developed to provide reliable, in-order delivery of messages over the inherently unreliable UDP protocol. HTP employs window-based flow control to ensure data integrity and delivery. It is designed to handle packet loss, delays, and reordering that are common in unreliable communication channels.
 
 ---
 
@@ -56,7 +50,7 @@ MTP is a custom transport protocol developed to provide reliable, in-order deliv
 ##  Repository Structure
 
 ```sh
-└── MTP/
+└── HTP/
     ├── Makefile
     ├── Makefile_initmsocket
     ├── Makefile_libmsocket
@@ -76,16 +70,16 @@ MTP is a custom transport protocol developed to provide reliable, in-order deliv
 
 | File                                                                                         | Summary                                          |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| [Makefile](https://github.com/ParamBhaskar/MTP/blob/main/Makefile)                         | General Makefile for building the project.         |
-| [Makefile_initmsocket](https://github.com/ParamBhaskar/MTP/blob/main/Makefile_initmsocket) | Makefile for initializing MTP socket.              |
-| [Makefile_libmsocket](https://github.com/ParamBhaskar/MTP/blob/main/Makefile_libmsocket)   | Makefile for compiling MTP library.                |
-| [Makefile_users](https://github.com/ParamBhaskar/MTP/blob/main/Makefile_users)             | Makefile for compiling user applications.          |
-| [initmsocket.c](https://github.com/ParamBhaskar/MTP/blob/main/initmsocket.c)               | Initializes sockets and manages threads for message handling and garbage collection. |
-| [msocket.c](https://github.com/ParamBhaskar/MTP/blob/main/msocket.c)                       | Core MTP socket implementation.                   |
-| [msocket.h](https://github.com/ParamBhaskar/MTP/blob/main/msocket.h)                       | Header file for MTP socket.                       |
-| [user1.c](https://github.com/ParamBhaskar/MTP/blob/main/user1.c)                           | Another example user application utilizing MTP.    |
-| [user2.c](https://github.com/ParamBhaskar/MTP/blob/main/user2.c)                           | Example user application utilizing MTP.           |
-| [file_to_transfer.txt](https://github.com/ParamBhaskar/MTP/blob/main/file_to_transfer.txt) | Sample file used for testing file transfer.        |
+| [Makefile](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/Makefile)                         | General Makefile for building the project.         |
+| [Makefile_initmsocket](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/Makefile_initmsocket) | Makefile for initializing MTP socket.              |
+| [Makefile_libmsocket](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/Makefile_libmsocket)   | Makefile for compiling MTP library.                |
+| [Makefile_users](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/Makefile_users)             | Makefile for compiling user applications.          |
+| [initmsocket.c](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/initmsocket.c)               | Initializes sockets and manages threads for message handling and garbage collection. |
+| [msocket.c](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/msocket.c)                       | Core MTP socket implementation.                   |
+| [msocket.h](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/msocket.h)                       | Header file for MTP socket.                       |
+| [user1.c](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/user1.c)                           | Another example user application utilizing MTP.    |
+| [user2.c](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/user2.c)                           | Example user application utilizing MTP.           |
+| [file_to_transfer.txt](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/file_to_transfer.txt) | Sample file used for testing file transfer.        |
 
 
 ---
@@ -100,16 +94,16 @@ Ensure you have the following dependencies installed on your system:
 
 ###  Installation
 
-1. Clone the MTP repository:
+1. Clone the HTP repository:
 
 ```sh
-git clone https://github.com/ParamBhaskar/MTP
+git clone https://github.com/guru-divine/Hybrid-Transport-Protocol
 ```
 
 2. Change to the project directory:
 
 ```sh
-cd MTP
+cd Hybrid-Transport-Protocol
 ```
 
 3. Compile the files:
@@ -124,7 +118,7 @@ make
 ./initmsocket 
 ```
 
-###  Running MTP
+###  Running HTP
 
 Open another two terminals, one for sending and another for receiving file:
 
@@ -141,15 +135,15 @@ In second terminal,
 ```
 Similarly, you can open as many terminals as you want to run multiple socket pairs simultaneously.
 
-![image](https://github.com/ParamBhaskar/MTP/assets/108367037/d298a592-e43a-4d6e-a47e-ed2896beb164)
+![image](https://github.com/guru-divine/Hybrid-Transport-Protocol/assets/108367037/d298a592-e43a-4d6e-a47e-ed2896beb164)
 
 ##  Contributing
 
 Contributions are welcome! Here are several ways you can contribute:
 
-- **[Submit Pull Requests](https://github.com/ParamBhaskar/MTP/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-- **[Join the Discussions](https://github.com/ParamBhaskar/MTP/discussions)**: Share your insights, provide feedback, or ask questions.
-- **[Report Issues](https://github.com/ParamBhaskar/MTP/issues)**: Submit bugs found or log feature requests for Mtp.
+- **[Submit Pull Requests](https://github.com/guru-divine/Hybrid-Transport-Protocol/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://github.com/guru-divine/Hybrid-Transport-Protocol/discussions)**: Share your insights, provide feedback, or ask questions.
+- **[Report Issues](https://github.com/guru-divine/Hybrid-Transport-Protocol/issues)**: Submit bugs found or log feature requests for Mtp.
 
 <details closed>
     <summary>Contributing Guidelines</summary>
@@ -157,7 +151,7 @@ Contributions are welcome! Here are several ways you can contribute:
 1. **Fork the Repository**: Start by forking the project repository to your GitHub account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a Git client.
    ```sh
-   git clone https://github.com/ParamBhaskar/MTP
+   git clone https://github.com/guru-divine/Hybrid-Transport-Protocol
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
@@ -179,10 +173,6 @@ Once your PR is reviewed and approved, it will be merged into the main branch.
 </details>
 
 ---
-
-##  Acknowledgments
-
-- Special thanks to Prof. Arobinda Gupta and Prof. Sandip Chakraborty for guidance and mentorship throughout the project.
 
 [**Return**](#quick-links)
 
